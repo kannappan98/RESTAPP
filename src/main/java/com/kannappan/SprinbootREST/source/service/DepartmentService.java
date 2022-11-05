@@ -1,0 +1,20 @@
+package com.kannappan.SprinbootREST.source.service;
+
+import com.kannappan.SprinbootREST.source.entity.Department;
+import com.kannappan.SprinbootREST.source.error.DepartmentNotFoundException;
+
+import java.util.List;
+
+public interface DepartmentService {
+    public Department saveDepartment(Department department);
+
+    public List<Department> fetchDepartmentList();
+
+    public Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
+
+    public void deleteDepartmentById(Long departmentId);
+
+    public Department updateDepartment(Long departmentId, Department department);
+
+    Department fetchDepartmentByName(String departmentName);
+}
